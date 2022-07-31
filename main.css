@@ -1,0 +1,15 @@
+.player {
+	display: flex;
+	flex-direction: row;
+	margin-top: .75em;
+}
+
+.position {
+	margin-left: 1em;
+}
+
+/* buttons */
+#randomize {
+	margin-left: 1em;
+	margin-right: 1.5em;
+}
