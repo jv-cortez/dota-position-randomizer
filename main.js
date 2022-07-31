@@ -24,13 +24,24 @@ randomizerBtn.addEventListener("click", () => {
 	returnPosition(playerList);
 });
 
+const countPlayerTotal = (playerDetails) => {
+	if (playerCounter > 4){
+		alert("5 stack already!");	
+	} else {
+		playerDetails.id = playerCounter++;
+		playerList.push(playerDetails);
+		renderPlayer(playerDetails);
+	}
+}
+
 const createPlayer = () => {
 	const playerDetails = {
-		id : playerCounter++,
+		id : 0,
 		position : 0
 	};
-	playerList.push(playerDetails);
-	renderPlayer(playerDetails);
+
+	countPlayerTotal(playerDetails);
+	
 }
 
 const renderPlayer = (playerDetails) => {
