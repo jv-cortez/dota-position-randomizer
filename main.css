@@ -1,5 +1,8 @@
-.player {
+body {
 	display: flex;
+	justify-content: center;
+}
+.player {
 	flex-direction: row;
 	margin-top: .75em;
 }
