@@ -2,16 +2,40 @@ body {
 	display: flex;
 	justify-content: center;
 }
-.player {
-	flex-direction: row;
+
+#playerListContainer {
+	display: flex;
+	flex-direction: column;
 	margin-top: .75em;
 }
 
+.player {
+	display: inline-flex;
+	justify-content: center;
+	margin-top: .75em;
+	font-size: 30px;
+}
+
+.player input {
+	font-size: 25px;
+	height: 1.25em;	
+	width: 7em;
+}
+
 .position {
-	margin-left: 1em;
+	margin-left: .5em;
 }
 
 /* buttons */
+#buttonsContainer {
+	display: flex;
+	justify-content: center;
+}
+
+#buttonsContainer button  {
+	flex-grow: 1;
+}
+
 #randomize {
 	margin-left: 1em;
 	margin-right: 1.5em;
