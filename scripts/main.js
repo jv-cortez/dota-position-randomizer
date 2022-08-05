@@ -56,7 +56,8 @@ const renderPlayer = (playerDetails) => {
 			<input type = "text" 
 						 class = "playerName" 
 						 name = "playerName"
-						 required>
+						 placeholder = "Enter Name"
+						 required >
 			</div> 
 			<div class = "position" data-id = ${playerId}>${playerDetails.position}</div>
 	`;
@@ -77,7 +78,7 @@ const removePlayers = () => {
 	const newPlayerListContainer = document.createElement("div");
 	newPlayerListContainer.setAttribute("id", "playerListContainer");
 	// add playerList after buttons div
-	const referenceElement = document.getElementById("buttons");
+	const referenceElement = document.getElementById("buttonsContainer");
 	referenceElement.after(newPlayerListContainer);
 }
 
