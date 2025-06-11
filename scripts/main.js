@@ -22,6 +22,13 @@ const randomizerBtn = document.getElementById("randomize");
 // clicking randomize checks input for name
 randomizerBtn.addEventListener("click", () => {
 	returnPosition(playerList);
+	//
+    if (playerList){
+        alert("Please write a name lol")
+    return;
+    }
+
+
 });
 
 const countPlayerTotal = (playerDetails) => {
