@@ -6,3 +6,4 @@
 - ~~make the app larger and centered~~
 - use openDota API to search for dota accounts
 - make frontend cooler
+- show number and name of position
