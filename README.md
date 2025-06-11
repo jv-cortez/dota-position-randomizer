@@ -5,3 +5,4 @@
 - able to delete single players in addtion to clearing all players
 - ~~make the app larger and centered~~
 - use openDota API to search for dota accounts
+- make frontend cooler
