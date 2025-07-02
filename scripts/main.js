@@ -21,15 +21,16 @@ const returnPosition = (playerList) => {
 const randomizerBtn = document.getElementById("randomize");
 // clicking randomize checks input for name
 randomizerBtn.addEventListener("click", () => {
-	returnPosition(playerList);
-	//
-    if (playerList){
-        alert("Please write a name lol")
-    return;
-    }
-
-
+	checkNameInput(playerList);
 });
+
+const checkNameInput = (playerList) => {
+	if (playerList){
+		alert("Please write a name lol");
+	} else {
+		returnPosition(playerList);
+	}
+}
 
 const countPlayerTotal = (playerDetails) => {
 	if (playerCounter > 4){
