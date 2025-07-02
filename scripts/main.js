@@ -14,7 +14,7 @@ const returnPosition = (playerList) => {
 	const totalPlayers = playerList.length;
 	for(let i = 0; i < totalPlayers; i++) {
 		let positionElement = document.querySelector(`[data-id = "${i}"]`);
-		positionElement.innerHTML = positionList[i];
+		positionElement.innerHTML = positionNames[positionList[i]];
 	}
 }
 
@@ -47,17 +47,18 @@ const createPlayer = () => {
 		id : 0,
 		position : 0
 	};
-
 	countPlayerTotal(playerDetails);
-	
 }
 
 const renderPlayer = (playerDetails) => {
 	const playerListContainer = document.querySelector("#playerListContainer");
 	const player = document.createElement("div");
 	player.setAttribute("class", "player");
-	let playerId = playerDetails.id;
-	let showPlayerCount = playerId + 1;
+	const playerId = playerDetails.id;
+	const showPlayerCount = playerId + 1;
+	const positionId = playerDetails.position;
+	const playerPosition = positionNames[positionId];
+
 	player.innerHTML = `
 			<div class="name">
 			<label for = "playerName">${showPlayerCount} Player: </label>
@@ -67,7 +68,7 @@ const renderPlayer = (playerDetails) => {
 						 placeholder = "Enter Name"
 						 required >
 			</div> 
-			<div class = "position" data-id = ${playerId}>${playerDetails.position}</div>
+			<div class = "position" data-id = ${playerId}>${playerPosition}</div>
 	`;
 	
 	playerListContainer.append(player);
