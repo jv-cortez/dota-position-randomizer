@@ -25,6 +25,7 @@ randomizerBtn.addEventListener("click", () => {
 });
 
 const checkNameInput = (playerList) => {
+	// filled inputs triggering alert
 	if (playerList){
 		alert("Please write a name lol");
 	} else {
