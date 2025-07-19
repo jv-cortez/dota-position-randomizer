@@ -21,15 +21,16 @@ const returnPosition = (playerList) => {
 const randomizerBtn = document.getElementById("randomize");
 // clicking randomize checks input for name
 randomizerBtn.addEventListener("click", () => {
-	checkNameInput(playerList);
+	checkPlayersExist(playerList);
 });
 
-const checkNameInput = (playerList) => {
+const checkPlayersExist = (playerList) => {
 	// filled inputs triggering alert
-	if (playerList){
-		alert("Please write a name lol");
-	} else {
+	const isPlayerListEmpty = playerList.length;
+	if (isPlayerListEmpty){
 		returnPosition(playerList);
+	} else {
+		alert("Add a player");
 	}
 }
 
