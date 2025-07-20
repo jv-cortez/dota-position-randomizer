@@ -8,24 +8,24 @@
   <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
 </head>
 <body>
-  <div class = "randomizerApp">
+  <form id = "randomizerApp">
     <h1> Dota Position Randomizer </h1>
     <div id = "buttonsContainer">
       <button id = "addPlayer"
             type = "button">
         Add player
       </button>
-      <button id = "randomize"
-              type = "button">
-        Randomize
-      </button>
+      <input id = "randomize"
+            value = "Randomize"
+            type = "submit">
+      </input>
       <button id = "deletePlayerList"
               type = "button">
         Clear
       </button>
     </div>
     <div id = "playerListContainer"></div>
-  </div>
+  </form>
   <script src='scripts/constants.js'></script>
   <script src='scripts/main.js'></script>
 </body>

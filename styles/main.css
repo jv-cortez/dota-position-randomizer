@@ -32,7 +32,7 @@ body {
 	justify-content: center;
 }
 
-#buttonsContainer button  {
+#buttonsContainer button, #randomize  {
 	flex-grow: 1;
 }
 

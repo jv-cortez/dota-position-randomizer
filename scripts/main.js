@@ -18,20 +18,37 @@ const returnPosition = (playerList) => {
 	}
 }
 
-const randomizerBtn = document.getElementById("randomize");
-// clicking randomize checks input for name
-randomizerBtn.addEventListener("click", () => {
-	checkPlayersExist(playerList);
+const randomizerBtn = document.getElementById("randomizerApp");
+
+randomizerBtn.addEventListener("submit", (e) => {
+	if (
+		checkPlayersExist(playerList) ||
+		checkNamesAllFilled())	{
+		returnPosition(playerList);
+	}
+	e.preventDefault();
 });
 
 const checkPlayersExist = (playerList) => {
-	// filled inputs triggering alert
 	const isPlayerListEmpty = playerList.length;
-	if (isPlayerListEmpty){
-		returnPosition(playerList);
-	} else {
+	let playersExists = true;
+	if (!isPlayerListEmpty){
 		alert("Add a player");
+		playersExists = false;
 	}
+	return playersExists;
+}
+
+const checkNamesAllFilled = () => {
+	const inputs = document.querySelectorAll(".playerName");
+	let allFilled = true;
+	for (const input of inputs) {
+		if (input.value.trim() === "") {
+			allFilled =  false;
+			break;
+		}
+	}
+	return allFilled;
 }
 
 const countPlayerTotal = (playerDetails) => {
@@ -68,7 +85,7 @@ const renderPlayer = (playerDetails) => {
 						 class = "playerName" 
 						 name = "playerName"
 						 placeholder = "Enter Name"
-						 required >
+						 required />
 			</div> 
 			<div class = "position" data-id = ${playerId}>${playerPosition}</div>
 	`;
